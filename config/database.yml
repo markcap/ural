@@ -51,8 +51,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: ebdb
-  host: <%= ENV['PRODUCTION_DATABASE_HOST'] %>
-  username: <%= ENV['PRODUCTION_DATABASE_USERNAME'] %>
-  password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
-  port: 5432
+  database: ENV['RDS_DB_NAME']
+  host: <%= ENV['RDS_DB_HOSTNAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  port: <%= ENV['RDS_PORT'] %>
